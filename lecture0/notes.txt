@@ -12,3 +12,24 @@ a + b       Adjacent Sibling Selector
 [ a=b ]     Attribute Selector
 a:b         Pseudoclass Selector
 a::b        Pseudoelement Selector
+
+Reposonsivity
+1. viewport: <meta name="viewport" content="width=device-width, initial-scale=1.0">
+2. Media Queries: Control how page will look like depend on how we render our page
+3. Flexbox: when there are multiple elements trying to fit the same page at same time
+4. Bootstrap: library of css
+
+Grid:
+display: Grid
+grid-column-gap: 30px
+
+
+Bootstrap:
+Separate screen in 12 parts
+class="col-3"       > use 3 parts of the screen no matter the size
+class="col-lg-3"    > use 3 parts on large screen
+class="col-sm-6"    > use 6 parts on small screen
+
+Sass (scss): extension for CSS
+sass variables.scss:variables.css
+sass --watch variables.scss:variables.css       > automatically change

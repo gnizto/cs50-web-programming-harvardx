@@ -1,0 +1,35 @@
+Git
+
+Advantages:
+* Test changes to code without losing the original (branches)
+* Revert back to old versions
+
+Tips
+* github.com/new -> to create a new repository
+
+Merge Conflicts
+* May occur conflicts
+* Happens when we have a different version locally and try to pull another version
+
+>> You can fork a repository, make changes and make a pull request
+
+Github Webpages
+* Create repository with <username>.github.io
+* Create index.html, add, commit and push
+* Go to setting in repository
+* Click on Pages
+
+Commans
+* git clone <url>                   -> clone the repository locally
+* git add  <filename>               -> add file I'd like to track
+* git commit -m "message"           -> create snapshot
+* git status                        -> tell whats happening in the local version
+* git push                          -> push changes of the local changes to online repository
+* git commit -am                    -> add all changed files 'm' for message
+* git pull                          -> get the latest version of the code
+* git log                           -> keep track of all changes
+* git reset --hard <commit>         -> get old version
+* git reset --hard origin/master
+* git branches                      -> tell current branch and existing ones
+* git checkout -b <branch_name>     -> create new branch
+* git checkout <branch_name>        -> switch branch

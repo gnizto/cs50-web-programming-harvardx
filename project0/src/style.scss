@@ -1,0 +1,116 @@
+$search-color: silver;
+
+%focus-bar {
+    border: 0.5px $search-color solid;
+    box-shadow: 0 4px 5px $search-color;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    // margin-right: 5px;
+    // float: right;
+}
+
+// Right top links
+.header-item {
+    padding: 0 5px;
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        color: black;
+        text-decoration: underline;
+    }
+}
+
+// Search div containg all elementes related to the search
+#search {
+    margin: 150px auto;
+    width: 50%;
+    // border: 1px black solid;
+    padding: 0 5%;
+}
+
+// Google PNG Logo
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 270px;
+}
+
+// Search bar containing all searching elements
+#search-bar {
+    height: 36px;
+    padding: 0 10px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 18px;
+    border: 0.5px $search-color solid;
+
+    &:focus-within {
+        @extend %focus-bar;
+    }
+
+    &:hover {
+        @extend %focus-bar;
+    }
+}
+
+.fa-search {
+    color: $search-color;
+    width: 5%;
+    // float: left;
+}
+
+// Place to type the search
+#input-text {
+    // display: block;
+    // float: right;
+    height: 100%;
+    width: 90%;
+    // width: 400px;
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    // border: 1px black solid;
+    // margin: 0 30px;
+}
+
+#end-area {
+    width: 5%;
+}
+
+// Submit main search
+// #submit {
+//     margin-top: 10px;
+// }
+
+.search-btn {
+    margin-top: 10px;
+    border: none;
+    padding: 6px;
+    width: 150px;
+    border-radius: 4px;
+
+    &:hover {
+        @extend %focus-bar;
+    }
+}
+
+#submit {
+    margin-right: 4px;
+}
+
+#lucky {
+    margin-left: 4px;
+}

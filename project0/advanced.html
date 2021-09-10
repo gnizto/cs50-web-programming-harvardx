@@ -1,13 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Google Advanced Search</title>
+        <title>Advanced Search</title>
+        <link rel="icon" type="img/ico" href="/src/favicon.ico">
+        <link rel="stylesheet" href="src/styles.css">
+        <link rel="stylesheet" href="src/font-awesome/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     </head>
     <body>
         <header>
-            <a href="index.html">Google Search</a>
-            <a href="images.html">Image Search</a>
+            <a class="header-item" href="index.html">Google Search</a>
+            <a class="header-item" href="images.html">Images Search</a>
+            
         </header>
-        <!-- body -->
+        
+        <div id="advanced-search">
+            <div id="logo-advanced">
+                <!-- <p id="images-text">images</p> -->
+            </div>
+
+            <form action="https://google.com/search">
+                
+                <div id="fields">
+                    <div class="field">
+                        <div class="cell description">
+                            all these words:
+                        </div>
+                        <div class="cell input-text-field">
+                            <input type="input-text" name="as_q">
+                        </div>
+                        <div class="cell explain">
+                            Type the important words: <span class="mono">rat terrier</span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="cell description">
+                            this exact word or phrase:
+                        </div>
+                        <div class="cell input-text-field">
+                            <input type="input-text" name="as_epq">
+                        </div>
+                        <div class="cell explain">
+                            Put exact words in quotes: <span class="mono">"rat terrier"</span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="cell description">
+                            any of these words:
+                        </div>
+                        <div class="cell input-text-field">
+                            <input type="input-text" name="as_oq">
+                        </div>
+                        <div class="cell explain">
+                            Type OR between all the words you want: <span class="mono">miniature OR standard</span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="cell description">
+                            none of these words:
+                        </div>
+                        <div class="cell input-text-field">
+                            <input type="input-text" name="as_eq">
+                        </div>
+                        <div class="cell explain">
+                            Put a minus sign just before words that you don't want: <span class="mono">-rodent, -"Jack Russell"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="buttons">
+                    <input class="search-btn" id="submit" type="submit" value="Google Search">
+                    <input class="search-btn" id="lucky" type="submit" name="btnI" value="I'm Feeling Lucky">
+                </div>
+            </form>
+
+
+        </div>
     </body>
 </html>

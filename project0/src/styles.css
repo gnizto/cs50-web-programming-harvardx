@@ -206,6 +206,8 @@ header {
 .cell {
   display: table-cell;
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .input-text-field > input {
@@ -225,10 +227,11 @@ header {
 }
 
 .explain {
+  height: 100%;
   font-size: 11px;
+  line-height: 12.5px;
   vertical-align: middle;
   padding: 0;
-  line-height: 12.5px;
   color: #555;
 }
 @media only screen and (max-width: 700px) {

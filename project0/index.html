@@ -2,26 +2,31 @@
 <html lang="en">
     <head>
         <title>Search</title>
+        <link rel="icon" type="img/ico" href="/src/favicon.ico">
         <link rel="stylesheet" href="src/styles.css">
         <link rel="stylesheet" href="src/font-awesome/css/font-awesome.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     </head>
     <body>
         <header>
-            <a class="header-item" href="images.html">Images</a>
-            <a class="header-item" href="advanced.html">Advanced</a>
+            <a class="header-item" href="images.html">Images Search</a>
+            <a class="header-item" href="advanced.html">Advanced Search</a>
         </header>
         
         <div id="search">
-            <img id="logo" src="src/google.png" alt="Google Logo">
+            <div id="logo">
+                <!-- <p id="images-text">images</p> -->
+            </div>
             <form action="https://google.com/search">
                 <div id="search-bar">
-                    <i class="fa fa-search"></i>
-                    <input id="input-text" type="text" name="q">
+                    <i class="fa fa-search search-left"></i>
+                    <input id="input-text" type="text" name="q" autofocus>
                     <span id="end-area"></span>
                 </div>
-                <input class="search-btn" id="submit" type="submit" value="Google Search">
-                <input class="search-btn" id="lucky" type="submit" value="I'm Feeling Lucky">
+                <div id="buttons">
+                    <input class="search-btn" id="submit" type="submit" value="Google Search">
+                    <input class="search-btn" id="lucky" type="submit" name="btnI" value="I'm Feeling Lucky">
+                </div>
             </form>
         </div>
     </body>

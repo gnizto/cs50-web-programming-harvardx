@@ -1,7 +1,11 @@
 $search-color: silver;
+$google-blue: #4285f4;
+$max-size-handheld: 1000px;
+$max-size-screen: 700px;
+$max-font: 30pt;
 
 %focus-bar {
-    border: 0.5px $search-color solid;
+    // border: 0.5px $search-color solid;
     box-shadow: 0 4px 5px $search-color;
 }
 
@@ -30,6 +34,10 @@ header {
         color: black;
         text-decoration: underline;
     }
+
+    @media handheld and (max-width: $max-size-handheld) {
+        font-size: $max-font;
+    }
 }
 
 // Search div containg all elementes related to the search
@@ -38,24 +46,66 @@ header {
     width: 50%;
     // border: 1px black solid;
     padding: 0 5%;
+
+    @media handheld and (max-width:$max-size-handheld){
+        width: 100%;
+        // background-color: gray;
+    }
+
+    @media only screen and (max-width:$max-size-screen){
+        width: 100%;
+        // background-color: gray;
+    }
+}
+
+#logo-area {
+    // position: relative;
+    border: 1px black solid;
+
+    // test
+    // display: block;
+    height: 92px;
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    // background-image: url(src/google.png) no-repeat;
+    // background-size: auto;
 }
 
 // Google PNG Logo
 #logo {
-    display: block;
+    height: 92px;
+    width: 270px;
     margin-left: auto;
     margin-right: auto;
-    width: 270px;
+
+    // border: 1px lawngreen solid;
+    // display: inline-block;
+    // height: 100%;
+    position: relative;
+    background-image: url(/src/google.png);
+    // background-position: bottom;
+    // background-size: 100%;
+    // margin-left: auto;
+    // margin-right: auto;
+    // width: 270px;
+
+    @media handheld and (max-width: $max-size-handheld) {
+        width: 500px;
+    }
 }
 
 // Search bar containing all searching elements
 #search-bar {
+    position: relative;
     height: 36px;
-    padding: 0 10px;
+    padding: 0 0 0 10px;
     width: 100%;
     margin-top: 10px;
+    margin-bottom: 15px;
     border-radius: 18px;
     border: 0.5px $search-color solid;
+    overflow: hidden;
 
     &:focus-within {
         @extend %focus-bar;
@@ -64,11 +114,22 @@ header {
     &:hover {
         @extend %focus-bar;
     }
+
+    @media handheld and (max-width: $max-size-handheld) {
+        font-size: $max-font;
+        height: 80px;
+        border-radius: 40px;
+    }
 }
 
-.fa-search {
+.search-left {
     color: $search-color;
     width: 5%;
+    padding-left: 1%;
+    
+    @media handheld and (max-width: $max-size-handheld) {
+        font-size: $max-font;
+    }
     // float: left;
 }
 
@@ -79,24 +140,34 @@ header {
     height: 100%;
     width: 90%;
     // width: 400px;
+    padding-right: 20px;
     border: 0;
     outline: none;
     box-shadow: none;
     // border: 1px black solid;
-    // margin: 0 30px;
+    // margin-bottom: 15px;
+    @media handheld and (max-width: $max-size-handheld) {
+        font-size: $max-font;
+    }
 }
 
-#end-area {
-    width: 5%;
-}
+// #end-area {
+//     width: 5%;
+// }
 
 // Submit main search
 // #submit {
 //     margin-top: 10px;
 // }
 
+#buttons {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
 .search-btn {
-    margin-top: 10px;
+    // margin-top: 10px;
     border: none;
     padding: 6px;
     width: 150px;
@@ -105,12 +176,72 @@ header {
     &:hover {
         @extend %focus-bar;
     }
+
+    @media handheld and (max-width: $max-size-handheld) {
+        font-size: $max-font;
+        width: auto;
+        border-radius: 20px;
+        padding: 15px;
+    }
+
 }
 
 #submit {
     margin-right: 4px;
+    @media handheld and (max-width: $max-size-handheld) {
+        margin-right: 15px;
+    }
+    // float: right;
 }
 
 #lucky {
     margin-left: 4px;
+    @media handheld and (max-width: $max-size-handheld) {
+        margin-left: 15px;
+    }
+    // float: left;
+}
+
+// Images Search
+#images-text {
+    // width: 270px;
+    // display: inline-block;
+    font-size: 17px;
+    color: $google-blue;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 0;
+    // text-align: right;
+    // margin: 0;
+    // margin-left: ;
+    // margin-right: auto;
+
+}
+
+.img-search-btn {
+    // display: block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    // right: 10;
+    // width: 95%;
+    border: none;
+    background: none;
+    text-align: right;
+    color: $google-blue;
+
+    // &::-moz-focus-inner {
+    //     padding: 0;
+    //     border: 0
+    // }
+}
+
+.search-right {
+    flex: 0 0 auto;
+    // border: 1px black solid;
+    position: absolute;
+    bottom: -14px;
+    right: -15.5px;
+    padding: 12px;
 }

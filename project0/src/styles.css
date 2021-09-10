@@ -1,5 +1,4 @@
 .search-btn:hover, #search-bar:hover, #search-bar:focus-within {
-  border: 0.5px silver solid;
   box-shadow: 0 4px 5px silver;
 }
 
@@ -25,58 +24,158 @@ header {
   color: black;
   text-decoration: underline;
 }
+@media handheld and (max-width: 1000px) {
+  .header-item {
+    font-size: 30pt;
+  }
+}
 
 #search {
   margin: 150px auto;
   width: 50%;
   padding: 0 5%;
 }
+@media handheld and (max-width: 1000px) {
+  #search {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  #search {
+    width: 100%;
+  }
+}
 
-#logo {
-  display: block;
+#logo-area {
+  border: 1px black solid;
+  height: 92px;
+  width: 270px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#logo {
+  height: 92px;
   width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-image: url(/src/google.png);
+}
+@media handheld and (max-width: 1000px) {
+  #logo {
+    width: 500px;
+  }
 }
 
 #search-bar {
+  position: relative;
   height: 36px;
-  padding: 0 10px;
+  padding: 0 0 0 10px;
   width: 100%;
   margin-top: 10px;
+  margin-bottom: 15px;
   border-radius: 18px;
   border: 0.5px silver solid;
+  overflow: hidden;
 }
-.fa-search {
+@media handheld and (max-width: 1000px) {
+  #search-bar {
+    font-size: 30pt;
+    height: 80px;
+    border-radius: 40px;
+  }
+}
+
+.search-left {
   color: silver;
   width: 5%;
+  padding-left: 1%;
+}
+@media handheld and (max-width: 1000px) {
+  .search-left {
+    font-size: 30pt;
+  }
 }
 
 #input-text {
   height: 100%;
   width: 90%;
+  padding-right: 20px;
   border: 0;
   outline: none;
   box-shadow: none;
 }
+@media handheld and (max-width: 1000px) {
+  #input-text {
+    font-size: 30pt;
+  }
+}
 
-#end-area {
-  width: 5%;
+#buttons {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
 }
 
 .search-btn {
-  margin-top: 10px;
   border: none;
   padding: 6px;
   width: 150px;
   border-radius: 4px;
 }
+@media handheld and (max-width: 1000px) {
+  .search-btn {
+    font-size: 30pt;
+    width: auto;
+    border-radius: 20px;
+    padding: 15px;
+  }
+}
+
 #submit {
   margin-right: 4px;
+}
+@media handheld and (max-width: 1000px) {
+  #submit {
+    margin-right: 15px;
+  }
 }
 
 #lucky {
   margin-left: 4px;
+}
+@media handheld and (max-width: 1000px) {
+  #lucky {
+    margin-left: 15px;
+  }
+}
+
+#images-text {
+  font-size: 17px;
+  color: #4285f4;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 0;
+}
+
+.img-search-btn {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  text-align: right;
+  color: #4285f4;
+}
+
+.search-right {
+  flex: 0 0 auto;
+  position: absolute;
+  bottom: -14px;
+  right: -15.5px;
+  padding: 12px;
 }
 
 /*# sourceMappingURL=styles.css.map */
